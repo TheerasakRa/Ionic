@@ -1,0 +1,7 @@
+{
+  "name": "slidebar",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

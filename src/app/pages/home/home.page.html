@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>HomePage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+      <ion-title class="title">
+        Ionic registerationhome
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    
+      <ion-list>
+        <ion-item>
+          <ion-avatar *ngIf="selectedImage">
+            <img [src]="selectedImage" alt="Avatar" />
+          </ion-avatar>
+          <input type="file" accept="image/*" (change)="onImageSelected($event)" />
+        </ion-item>
+        <ion-item>
+          <ion-label>Username</ion-label>
+          <ion-input type="text" [(ngModel)]="Username" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Email</ion-label>
+          <ion-input type="Email" [(ngModel)]="Email" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Password</ion-label>
+          <ion-input type="password"  [(ngModel)]="Password" required>
+          </ion-input>
+        </ion-item>
+        
+        <ion-button type="submit" (click)="gotonext()" expand="block" >
+          Login
+        </ion-button>
+      </ion-list>
+    
+  </ion-content>
