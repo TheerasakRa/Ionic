@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>loginauth</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    
+  <ion-list>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="Email" [(ngModel)]="email2" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input type="password"  [(ngModel)]="pass2" required>
+      </ion-input>
+    </ion-item>
+    
+    <ion-button type="submit" (click)="login()" expand="block" >
+      Login
+    </ion-button>
+    <ion-button type="submit" (click)="register()" expand="block" >
+      Register
+    </ion-button>
+  </ion-list>
+
+</ion-content>

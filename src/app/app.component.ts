@@ -10,6 +10,7 @@ export class AppComponent {
     { title: 'About', url: '/about', icon: 'document' },
     { title: 'Contact', url: '/contact', icon: 'person' },
     { title: 'HomeDB', url: '/homedb', icon: 'laptop' },
+    // { title: 'Login', url: '/loginauth', icon: 'laptop' },
   ];
   // public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
