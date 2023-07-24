@@ -44,32 +44,10 @@ export class HomePage implements OnInit {
   async logout() {
     const loading = await this.loadingController.create();
     await loading.present();
-
-    try {
-      // Call the logout method from the AuthService
-      await this.authService.logout();
-
-      // Dismiss the loading controller after successful logout
-      await loading.dismiss();
-    } catch (error) {
-      // Dismiss the loading controller if an error occurs
-      await loading.dismiss();
-      try {
-        // Call the logout method from the AuthService
-        await this.authService.logout();
-
-        // Dismiss the loading controller after successful logout
-        await loading.dismiss();
-
-        // Redirect the user to the login page after successful logout
-        this.router.navigateByUrl('/login', { replaceUrl: true });
-      } catch (error) {
-        // Dismiss the loading controller if an error occurs
-        await loading.dismiss();
-
-        this.showAlert('Error', 'An error occurred during logout. Please try again!');
-      }
-    }
+    this.authService.logout();
+    await loading.dismiss();
+    this.router.navigateByUrl('/loginauth',{replaceUrl:true})
+   
   }
   async showAlert(header: string, message: string) {
     const alert = await this.alertController.create({

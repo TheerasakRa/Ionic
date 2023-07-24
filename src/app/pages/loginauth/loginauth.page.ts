@@ -96,24 +96,5 @@ export class LoginauthPage implements OnInit {
     await alert.present();
   }
 
-  async logout() {
-    const loading = await this.loadingController.create();
-    await loading.present();
 
-    try {
-      // Call the logout method from the AuthService
-      await this.authService.logout();
-
-      // Dismiss the loading controller after successful logout
-      await loading.dismiss();
-    } catch (error) {
-      // Dismiss the loading controller if an error occurs
-      await loading.dismiss();
-
-      this.showAlert(
-        'Error',
-        'An error occurred during logout. Please try again!'
-      );
-    }
-  }
 }
